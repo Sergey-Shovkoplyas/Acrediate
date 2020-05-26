@@ -1,5 +1,9 @@
 # Start template
 
+Pages
+- https://sergey-shovkoplyas.github.io/Acrediate/app/index.html
+- https://sergey-shovkoplyas.github.io/Acrediate/app/cautare.html
+
 Start template with (optional)
 - normalize.css
 - bootstrap-grid.min.css
