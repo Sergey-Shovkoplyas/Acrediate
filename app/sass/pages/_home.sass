@@ -1,0 +1,214 @@
+.registration
+  margin-bottom: 137px
+  +media-sm 
+    margin-bottom: 30px
+  
+.registration__top
+  padding: 35px 0px
+  background-color: #fff
+  +media-sm 
+    padding: 30px
+
+.registration__top-row
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +media-sm 
+    flex-direction: column
+    align-items: flex-start
+
+.registration__title
+  font-size: 25px
+  color: #000
+  +media-sm
+    font-size: 23px
+    margin-bottom: 10px
+
+.registration__subtitle
+  font-size: 14px
+  color: #7A7A7A
+
+// ----------------------- registration__bottom --------------------- 
+
+.registration__bottom
+  position: relative
+  padding: 30px 0px 6px
+  background-color: #FAFAFA
+  +media-sm 
+    border-bottom-left-radius: 20px
+    border-bottom-right-radius: 20px 
+
+.registration__form
+  position: relative
+  padding: 0 15px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  +media-sm 
+    padding: 0
+    flex-direction: column
+
+.registration__label
+  width: 48.6%
+  margin-bottom: 30px
+  +media-sm 
+    width: 100%
+    margin-bottom: 25px
+
+.registration__name
+  margin-bottom: 10px
+  font-size: 14px
+  color: #7A7A7A
+
+.registration__item
+  width: 100%
+  padding: 11px 20px 
+  outline: none
+  background-color: #fff
+  border: 1.5px solid #E5E5E5
+  border-radius: 6px
+  font-size: 14px
+
+select.registration__item
+  -moz-appearance: none
+  -webkit-appearance: none
+  appearance: none
+  background: #fff url('../img/select-arrow.png') no-repeat right 20px center
+
+
+.registration__buttons
+  display: inline-block
+  position: absolute
+  width: 420px 
+  height: 77px
+  bottom: -82px
+  left: -15px
+  padding: 0px 30px 30px
+  background-color: #FAFAFA
+  border-bottom-left-radius: 20px
+  border-bottom-right-radius: 20px 
+  +media-sm 
+    width: auto
+    position: static
+    padding: 0
+    display: flex
+    justify-content: space-between
+
+
+.registration__btn
+  display: inline-block
+  width: 160px
+  margin-right: 30px
+  &:last-child 
+    margin-right: 0px
+  +media-sm
+    margin-right: 0px
+  +media-374 
+    width: 130px
+
+
+// ------------------ detail -----------------------------------
+.detail
+  overflow-x: scroll
+  a 
+    text-decoration: none 
+    color: #00A0FC
+
+.detail__table
+  min-width: 930px
+
+.detail__row
+  display: flex
+  border-bottom: 1px solid #E5E5E5
+  // outline: 1px solid red
+
+.detail__row.head 
+  background-color: #008FE2
+  border-radius: 6px
+  border: none
+  overflow: hidden
+  .detail__col 
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 14px
+    text-align: center
+    background-color: #008FE2
+    font-size: 12px
+    color: #fff
+    font-weight: 700
+ 
+.detail__col
+  width: 100%
+  padding: 30px 20px
+  // outline: 1px solid green
+  font-size: 14px 
+  line-height: 1.5
+  color: #3D3D3D
+  &:nth-child(1)
+    width: 40px
+    flex-shrink: 0
+    text-align: center
+    padding: 30px 0px
+  &:nth-child(2)
+    width: 135px
+    flex-shrink: 0
+  &:nth-child(2n+1) 
+    background-color: #FAFAFA
+
+.status
+  display: inline-block
+  width: 10px
+  height: 10px
+  border-radius: 50%
+  // background-color: #000
+  margin-right: 5px
+  &--1
+    background-color: #7EB712
+  &--2
+    background-color: #7A7A7A
+  &--3
+    background: rgb(126,183,18)
+    background: -moz-linear-gradient(90deg, rgba(126,183,18,1) 50%, rgba(122,122,122,1) 50%)
+    background: -webkit-linear-gradient(90deg, rgba(126,183,18,1) 50%, rgba(122,122,122,1) 50%)
+    background: linear-gradient(90deg, rgba(126,183,18,1) 50%, rgba(122,122,122,1) 50%)
+      
+
+// ------------------------ cautare ----------------------------------
+
+.cautare
+  color: #000
+  font-size: 14px
+  line-height: 1.7
+  padding: 80px 0px
+  padding-bottom: 20px
+  display: flex
+  justify-content: space-between
+  margin: 0 -15px
+  flex-wrap: wrap
+  +media-sm 
+    padding: 30px 0px
+    padding-bottom: 0px
+    flex-direction: column 
+
+
+.cautare__item
+  width: 33.33%
+  padding: 0 15px
+  margin-bottom: 60px
+  +media-sm 
+    width: 100%
+    margin-bottom: 30px
+  
+
+
+.cautare__title 
+  font-weight: 700
+
+.cautare__value
+  margin-bottom: 20px
+
+.cautare__btn
+  width: 160px
+  +media-sm 
+    margin: 0 auto
