@@ -60,7 +60,8 @@
   font-size: 14px
   color: #7A7A7A
 
-.registration__item
+.registration__item,
+.jq-selectbox__select
   width: 100%
   padding: 11px 20px 
   outline: none
@@ -69,11 +70,59 @@
   border-radius: 6px
   font-size: 14px
 
-select.registration__item
-  -moz-appearance: none
-  -webkit-appearance: none
-  appearance: none
-  background: #fff url('../img/select-arrow.png') no-repeat right 20px center
+
+// ----------- custom select-------------
+select.registration__item 
+  display: none !important
+
+.jq-selectbox.registration__item
+  padding: 0 
+  border: none
+
+.jq-selectbox__select
+  cursor: pointer
+  position: relative
+  &::after 
+    position: absolute
+    content: ''
+    top: 18px
+    right: 20px
+    transform: translate(0px, -50%) rotate(-45deg)
+    width: 8px 
+    height: 8px
+    border-bottom: 1px solid #A9A9A9
+    border-left: 1px solid #A9A9A9
+    transition: .3s
+  &.active 
+    &::after
+      transform: translate(0px, -50%) rotate(135deg)
+
+
+.jq-selectbox__dropdown
+  width: 100%
+  top: 33px !important
+  ul 
+    background-color: #fff
+    width: 100%
+    padding: 0
+    margin: 0
+    border: 1.5px solid #E5E5E5
+    border-top: none
+    border-bottom-right-radius: 6px
+    border-bottom-left-radius: 6px
+  li 
+    cursor: pointer
+    padding: 6px 20px
+    &:hover 
+      background-color: #E5E5E5
+
+
+
+
+
+
+
+// ----------- END ---------------------
 
 
 .registration__buttons
@@ -113,14 +162,25 @@ select.registration__item
   a 
     text-decoration: none 
     color: #00A0FC
+  +media-sm 
+    overflow: visible
 
 .detail__table
   min-width: 930px
+  +media-sm 
+    min-width: auto
+    width: 100% 
 
 .detail__row
   display: flex
   border-bottom: 1px solid #E5E5E5
   // outline: 1px solid red
+  +media-sm 
+    flex-direction: column
+    border: 1.5px solid #E5E5E5
+    border-radius: 6px
+    margin-bottom: 30px
+    padding: 10px 0px
 
 .detail__row.head 
   background-color: #008FE2
@@ -137,8 +197,11 @@ select.registration__item
     font-size: 12px
     color: #fff
     font-weight: 700
+  +media-sm 
+    display: none
  
 .detail__col
+  position: relative
   width: 100%
   padding: 30px 20px
   // outline: 1px solid green
@@ -155,6 +218,54 @@ select.registration__item
     flex-shrink: 0
   &:nth-child(2n+1) 
     background-color: #FAFAFA
+  +media-sm
+    background-color: #fff
+    padding: 15px 25px 
+    &:nth-child(1),
+    &:nth-child(2)
+      display: none
+    &:nth-child(2n) 
+      background-color: #FAFAFA
+    &:nth-child(2n+1) 
+      background-color: #fff
+    &:nth-child(3),
+    &:nth-child(4)
+      font-weight: 600
+
+.detail__title
+  display: none
+  +media-sm 
+    display: block
+    color: #A9A9A9
+    margin-bottom: 5px
+    font-weight: 400
+
+.detail__status
+  display: none
+  +media-sm 
+    display: block
+    margin-top: 5px
+    color: #A9A9A9
+    font-weight: 400
+    span 
+      margin-left: 5px
+      font-weight: 600
+      color: #000
+
+.detail__number
+  display: none
+  +media-sm 
+    position: absolute
+    top: -22px
+    left: 14px
+    padding: 0 10px 
+    background-color: #fff
+    display: block
+    color: #A9A9A9
+    font-weight: 400
+
+    
+
 
 .status
   display: inline-block
